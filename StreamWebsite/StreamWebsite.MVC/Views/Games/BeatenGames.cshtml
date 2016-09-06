@@ -1,0 +1,18 @@
+﻿@model IEnumerable<string>
+@{
+    ViewBag.Title = "BeatenGames";
+}
+
+<h2>BeatenGames</h2>
+
+<div>
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+        <div class="panel panel-warning">@Model.ElementAt(i)</div>
+    }
+
+    @foreach (var games in Model)
+    {
+        <div class="panel panel-primary">@games</div>
+    }
+</div>

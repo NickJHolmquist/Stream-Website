@@ -1,0 +1,46 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    @Styles.Render("~/Content/vendor")
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("xKILLZx Stream", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Games", "Index", "Games", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("BeatenGames", "BeatenGames", "Games", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-right">
+                <a class="btn btn-default" title="Twitter" href="http://www.twitter.com/xkillzzx"><i class="fa fa-2x fa-twitter"></i></a>
+                <a class="btn btn-default" title="Facebook" href="https://www.facebook.com/Killz-Gaming-255668014483853/?ref=aymt_homepage_panel"><i class="fa fa-2x fa-facebook"></i></a>
+                <a class="btn btn-default" title="Twitch" href="https://www.twitch.tv/xkillzx"><i class="fa fa-2x fa-twitch"></i></a>
+                <a class="btn btn-default" title="Donate" href="https://www.twitchalerts.com/donate/xkillzx"><i class="fa fa-2x fa-paypal"></i></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <footer class="col-md-12">
+            <hr />
+            <p>&copy; @DateTime.Now.Year - xKILLZx Stream</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/Scripts/vendor")
+</body>
+</html>

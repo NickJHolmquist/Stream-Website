@@ -1,0 +1,36 @@
+﻿@model IEnumerable<StreamWebsite.MVC.ViewModels.GamesViewModel>
+@{
+    ViewBag.Title = "Games";
+}
+
+
+<div>
+    <h1>GAMES</h1>
+    @foreach (var item in Model)
+    {
+        <div class="panel-primary col-md-3">
+            <div class="panel-heading">@item.name</div>
+            <div class="panel-body">
+                <img src="@item.box" />
+            </div>
+        </div>
+    }
+</div>
+
+
+
+<button class="form-control" onclick="getGames('@Url.Action("GamesFetcher")')">Get Games</button>
+
+<script>
+    function loadBeatenGames(actionLink) {
+        $.get(actionLink, function (data) {
+            alert("Page was loaded.");
+        });
+    }
+
+    function getGames(actionPath) {
+        $.get(actionPath, function (data) {
+            alert(data);
+        });
+    }
+</script>

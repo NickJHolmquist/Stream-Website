@@ -1,0 +1,14 @@
+﻿body {
+    background-color:slategray;
+}
+
+.ScrollContainer {
+    height: 250px;
+    padding: 3px;
+}
+
+.Content {
+    overflow: auto;
+    height: 250px;
+    background-color: pink;
+}
